@@ -66,7 +66,7 @@
   <div class="vue-component">
 
     <h1>{{ message }}</h1>
-    <option v-for="student in students">
+    <!-- <option v-for="student in students">
       <h2>{{ student.first_name }}</h2>
       <h2>{{ student.last_name }}</h2>
       <h2>{{ student.email }}</h2>
@@ -79,7 +79,38 @@
       <h2>{{ student.github_url }}</h2>
       <h2>{{ student.photo }}</h2>
       
-    </option>
+    </option> -->
+   <!--  <input type="text" v-model="titleFilter" placeholder="Search by student">
+    <datalist id="first_names"> -->
+      <option v-for="student in students">{{ student.first_name }}</option>
+    <!-- </datalist> -->
+
+    <div class="row">
+
+      <div class="col-md-4" v-for="student in students" v-bind:key="student.id">
+        <div class="card mb-2">
+          <!-- <img class="card-img-top" v-bind:src="recipe.image" alt="Card image cap"> -->
+          <div class="card-body">
+            <h4 class="card-first name"> First Name: {{ student.first_name }}</h4>
+            <p class="card-text last name">Last Name: {{ student.last_name }}</p>
+            <p class="card-text email">Email: {{ student.email }}</p>
+            <p class="card-text phone number">Phone Number: {{ student.phone_number }}</p>
+            <p class="card-text short bio ">Short Bio: {{ student.short_bio }}</p>
+            <p class="card-text linkedin url ">Linkedin Url: {{ student.linkedin_url }}</p>
+            <p class="card-text twiier handle ">Twitter Handle: {{ student.twitter_handle }}</p>
+            <p class="card-text personal blog url ">Personal Blog Url: {{ student.personal_blog_url}}</p>
+            <p class="card-text online resume ">Online Resume: {{ student.online_resume }}</p>
+            <p class="card-text github url ">Github Url: {{ student.github_url }}</p>
+            <p class="card-text photo ">Photo: {{ student.photo }}</p>
+            <!-- <a v-bind:href="'/#/recipes/' + recipe.id" class="btn btn-primary">More info</a> -->
+           <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" v-on:click="setCurrentStudent(student)">
+              Launch demo modal
+            </button> -->
+            <!-- <router-link v-bind:to="{ path: '/recipes/' + recipe.id }">More info</router-link> -->
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </template>

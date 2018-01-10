@@ -70,16 +70,16 @@ var HomePage = {
     };
   },
 
-  mounted: function() {},
+  // mounted: function() {},
 
-  // mounted: function() {
-  //   axios.get("/v1/students").then(
-  //     function(response) {
-  //       this.students = response.data;
-  //       console.log(this.students);
-  //     }.bind(this)
-  //   );
-  // },
+  mounted: function() {
+    axios.get("https://salty-ridge-97861.herokuapp.com/v1/students").then(
+      function(response) {
+        this.students = response.data;
+        console.log(this.students);
+      }.bind(this)
+    );
+  },
 
   created: function() {},
   methods: {},

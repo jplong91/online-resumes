@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div id="vue-app">
+
+    <router-view></router-view>
+
+  </div>
+</body>
+</html>
+
+<template id="home-page">
+  <div class="vue-component">
+
+    <h1>{{ message }}</h1>
+    <option v-for="student in students">
+      <h2>{{ student.first_name }}</h2>
+      <h2>{{ student.last_name }}</h2>
+      <h2>{{ student.email }}</h2>
+      <h2>{{ student.phone_number }}</h2>
+      <h2>{{ student.short_bio }}</h2>
+      <h2>{{ student.linkedin_url }}</h2>
+      <h2>{{ student.twitter_handle }}</h2>
+      <h2>{{ student.personal_blog_url }}</h2>
+      <h2>{{ student.online_resume_url }}</h2>
+      <h2>{{ student.github_url }}</h2>
+      <h2>{{ student.photo }}</h2>
+      
+    </option>
+
+  </div>
+</template>
